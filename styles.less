@@ -1,9 +1,27 @@
+
+@active_row: #fcfed5;
+
 body {
 	font-family: 'Arial', sans-serif;
+	border-top: 5px solid #000000;
+	padding: 0;
+	margin: 0;
+	background: url('img/body_bg.png') repeat-x;
+	background-size: contain;
+	height: 1000px;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.show {
+	visibility: visible;
 }
 
 header {
 	text-transform: uppercase;
+	margin-top: 60px;
 	h1, p {
 		text-align: center;
 		margin: 0;
@@ -13,7 +31,7 @@ header {
 
 section {
 	width: 700px;
-	margin: 0 auto;
+	margin: 60px auto;
 	.header {
 		height: 50px;
 		background: url('img/section_header_bg.png') repeat-x;
@@ -60,10 +78,11 @@ section {
 		padding-left: 53px;
 		vertical-align: middle;
 		line-height: 53px;
+		border-bottom: 1px solid #aaaaaa;
 		input {
 			line-height: 25px;
 			border-top: 1px solid #707070;
-			width: 515px;
+			width: auto;
 		}
 		label {
 			background: url('img/section_nav_btn_bg.png') repeat-x center;
@@ -75,4 +94,89 @@ section {
 			border-bottom-right-radius: 5px;
 		}
 	}
+}
+
+table {
+	border-collapse: collapse;
+	tr {
+		td {
+		border: 1px solid #e7ebea;
+		background: #ffffff;
+		height: 50px;
+		}
+		td:first-child {
+			text-align: center;
+		}
+		td:nth-child(3) {
+			font-size: 14px;
+			padding-left: 15px;
+		}
+	}
+	tr:hover {
+		cursor: pointer;
+		td {
+			background: @active_row;
+		}	
+		.buttons ul{
+			.show;
+		}
+	}
+}
+
+.checkbox {
+	width: 40px
+}
+.space {
+	width: 5px;
+}
+.name {
+	width: 535px;
+}
+.buttons {
+	width: 120px;
+	text-align: center;
+	ul {
+		font-size: 0;
+		display: inline-block;
+		padding: 0px;
+		margin:0px;
+
+		li {
+			display: inline-block;
+			list-style: none;
+			padding: 0 10px;
+			border-right: 1px solid #cccccc;
+			a {
+				display: block;
+				width: 12px;
+				height: 13px;
+				background-color: red;
+				background-image: url('img/buttons_icon.png');
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+		li:first-child {
+			padding-left: 0px;
+			a {
+				background-position: 0 0;
+			}
+		}
+		li:last-child {
+			padding-right: 0px;
+			border-right: none;
+			a {
+				background-position: 100% 100%;
+			}
+		}
+	}
+}
+
+.table_bottom {
+	border: 1px solid #e7ebea;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	height: 15px;
+	width: 698px;
+	background: #ffffff;
 }
