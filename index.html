@@ -5,6 +5,8 @@
 	<title>Todo list</title>
 	<link rel="stylesheet/less" type="text/css" href="styles.less" />
 	<script src="less.js" type="text/javascript"></script>
+	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="main.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -20,16 +22,24 @@
 				<h4>Complete the test task for Ruby Garage</h4>
 				<ul>
 					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
+					<li><a class="delete" href="#"></a></li>
 				</ul>
 			</div>
-			<div class="nav">
-				<form>
-					<input type="text" name="create_field">
-					<label for="create_field">Add Task</label>
-				</form>
-			</div>
+			<div>
 			<table>
+				<tr>
+					<th colspan="2">
+						<div class="plus_green"></div>
+					</th>
+					<th>
+						<form>
+							<input type="text" name="create_field" placeholder="Start typing here to create a task">
+						</form>
+					</th>
+					<th>
+						<div for="create_field"><a href="#">Add Task</a></div>
+					</th>
+				</tr>
 				<tr>
 					<td class="checkbox">
 						<input type="checkbox" name="task1">
@@ -87,6 +97,7 @@
 					</td>
 				</tr>
 			</table>
+		</div>
 			<div class="table_bottom">
 				
 			</div>
@@ -98,15 +109,25 @@
 		<section>
 			<div class="header">
 				<h4>For Home</h4>
-
-			</div>
-			<div class="nav">
-				<form>
-					<input type="text" name="create_field">
-					<label for="create_field">Add Task</label>
-				</form>
+				<ul>
+					<li><a href="#"></a></li>
+					<li><a class="delete" href="#"></a></li>
+				</ul>
 			</div>
 			<table>
+				<tr>
+					<th colspan="2">
+						<div class="plus_green"></div>
+					</th>
+					<th>
+						<form>
+							<input type="text" name="create_field" placeholder="Start typing here to create a task">
+						</form>
+					</th>
+					<th>
+						<div for="create_field"><a href="#">Add Task</a></div>
+					</th>
+				</tr>
 				<tr>
 					<td class="checkbox">
 						<input type="checkbox" name="task1">
@@ -168,7 +189,10 @@
 				
 			</div>
 		</section>
-		<footer></footer>
+		<footer>
+			<button class="add_list"><span></span>Add TODO list</button>
+			<p>&copy Ruby Garage</p>
+		</footer>
 	</div>
 </body>
 </html>
