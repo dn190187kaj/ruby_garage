@@ -177,7 +177,7 @@ section {
 			list-style: none;
 			padding: 0 10px;
 			border-right: 1px solid #cccccc;
-			a {
+			.rename_one_row, .delete_one_row{
 				display: block;
 				width: 12px;
 				height: 13px;
@@ -189,8 +189,23 @@ section {
 		}
 		li:first-child {
 			padding-left: 0px;
-			a {
+			.up {
+				display: block;
+				width: 8px;
+				height: 4px;
+				background-color: none;
+				background-image: url('img/up_down_icon.png');
 				background-position: 0 0;
+				margin-bottom: 2px;
+			}
+			.down {
+				display: block;
+				width: 8px;
+				height: 4px;
+				background-color: none;
+				background-image: url('img/up_down_icon.png');
+				background-position: 100% 100%;
+				margin-top: 2px;
 			}
 		}
 		li:last-child {
