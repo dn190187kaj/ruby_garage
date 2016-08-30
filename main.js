@@ -25,20 +25,22 @@ $(document).ready(function(){
 
 	})
 
-	// Удаляем строку (осн.кнопка)
-	$('body').on('click', '.delete', function(){
-		$(":checked").parent().parent().remove();
+	// Удаляем TODO LIST (осн.кнопка)
+	$('body').on('click', '.delete', function(event){
+		$(this).parent().parent().parent().parent().remove();
+		event.preventDefault();
 	})
 
-		// Переименовываем строку (осн.кнопка)
+		// Переименовываем TODO LIST (осн.кнопка)
 	$('body').on('click', '.rename', function(){
-		var rename = prompt('Enter TASK name', 'My task');
-		$(":checked").parent().parent().children('.name').html(rename);
+		var rename = prompt('Enter TASK LIST name', 'My task list');
+		$(this).parent().parent().parent().children('h4').html(rename);
 	})
 
 		// Удаляем строку (всплывающая кнопка)
-	$('body').on('click', '.delete_one_row', function(){
+	$('body').on('click', '.delete_one_row', function(event){
 		$(this).parent().parent().parent().parent().remove();
+	event.preventDefault();
 	})
 
 		// Переименовываем строку (всплывающая кнопка)
